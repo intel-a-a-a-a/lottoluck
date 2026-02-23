@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꿈해몽 AI 로또 추천 - 당신의 꿈이 번호가 되는 순간</title>
+    <meta name="description" content="AI가 당신의 꿈을 분석하여 행운의 로또 번호를 추천해 드립니다.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="loading-overlay" id="loading">
+        <div class="spinner"></div>
+        <p>꿈의 메시지를 AI가 해석하고 있습니다...</p>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1>🌙 꿈해몽 AI 로또</h1>
+            <p>어젯밤 당신의 무의식이 속삭인<br>행운의 숫자를 찾아보세요.</p>
+        </header>
+
+        <main class="glass-card">
+            <div class="input-group">
+                <label for="dream-input">✨ 어떤 꿈을 꾸셨나요?</label>
+                <textarea id="dream-input" placeholder="꿈의 내용을 자유롭게 적어주세요. 상세할수록 더 정확한 분석이 가능합니다. (예: 황금 돼지가 방 안으로 들어오는 꿈)"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="inc-numbers">🔮 꼭 포함하고 싶은 숫자</label>
+                <input type="text" id="inc-numbers" placeholder="예: 7, 14, 21 (콤마로 구분)">
+            </div>
+
+            <div class="input-group">
+                <label for="exc-numbers">🌫️ 제외하고 싶은 숫자</label>
+                <input type="text" id="exc-numbers" placeholder="예: 4, 13">
+            </div>
+
+            <div class="input-group" style="display: flex; align-items: center; justify-content: space-between;">
+                <label style="margin-bottom: 0;">추출할 세트 수</label>
+                <input type="number" id="set-count" value="5" min="1" max="10" style="width: 70px; text-align: center; padding: 0.5rem;">
+            </div>
+
+            <button class="action-button" id="analyze-btn">운명의 번호 확인하기</button>
+
+            <section id="results-section">
+                <div id="results-list"></div>
+                <div id="analysis-message"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>행운은 당신의 곁에 있습니다.<br>© 2026 꿈해몽 AI 로또 추천</p>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

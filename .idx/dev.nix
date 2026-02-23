@@ -4,6 +4,8 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.nodejs_20
+    # Add wrangler for Cloudflare deployment
+    pkgs.wrangler
     # Add packages for Korean input
     pkgs.ibus
     pkgs.ibus-hangul
